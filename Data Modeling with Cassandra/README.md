@@ -31,3 +31,23 @@ SELECT artist, song, fisrtName, lastName FROM test_db WHERE userid = 10 AND sess
 3. Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
 
 SELECT fisrtName, lastName FROM test_db WHERE song = 'All Hands Against His Own'
+
+## Instruction to Run the Project with Docker Image
+
+A Docker image was used so that I could develop this project on my local machine, rather than on Udacity's internal system. Thank you to Ken Hanscombe for providing easy to follow instructions on how to pull, run, and connect to the Apache Cassandra image.
+
+With Docker installed, pull the latest Apache Cassandra image and run a container as follows:
+
+> docker pull cassandra
+> docker run --name cassandra-container -p 9042:9042 -d cassandra:latest
+
+This will allow you to develop the data model (i.e. work through the Jupyter notebook), without altering the provided connection code which connects to the localhost with default port 9042:
+
+> from cassandra.cluster import Cassandra
+> cluster = Cluster(['127.0.0.1'])
+> session = cluster.connect()
+
+To stop and remove the container after the exercise:
+
+> docker stop cssandra-container
+> docker rm cassandra-container
