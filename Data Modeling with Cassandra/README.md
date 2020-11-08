@@ -16,7 +16,7 @@ The part of the ETL pipeline that transfers data from a set of CSV files within 
 
 ## Requested Data Analysis
 
-I had to create the data tables in Apache Cassandra based on the queries and the queries are based on the customer's request for data. The completed data model can be examined in the Project_1B_Data_Modeling_with_Cassandra.ipynb Jupyter Notebook.
+I was instructed to create tables in Apache Cassandra based on the queries provided. The completed data model can be found in the Project_1B_Data_Modeling_with_Cassandra.ipynb Jupyter Notebook.
 
 ### Creating tables to run the following queries with Apache Cassandra.
 
