@@ -22,15 +22,15 @@ I was instructed to create tables in Apache Cassandra based on the queries provi
 
 1. Give me the artist, song title and song's length in the music app history that was heard during sessionId = 338, and itemInSession = 4
 
-SELECT artist, song, lenght FROM test_db WHERE sessionId = 338 AND itemInSession = 4
+```SELECT artist, song, lenght FROM song_stats_by_artist WHERE sessionId = 338 AND itemInSession = 4```
 
 2. Give me only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
 
-SELECT artist, song, fisrtName, lastName FROM test_db WHERE userid = 10 AND sessionid = 182
+```SELECT artist, song, fisrtName, lastName FROM song_playlist_session WHERE userid = 10 AND sessionid = 182```
 
 3. Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
 
-SELECT fisrtName, lastName FROM test_db WHERE song = 'All Hands Against His Own'
+```SELECT fisrtName, lastName FROM user_name_by_song WHERE song = 'All Hands Against His Own'```
 
 ## Instruction to Run the Project with Docker Image
 
