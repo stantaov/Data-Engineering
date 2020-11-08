@@ -38,16 +38,16 @@ A Docker image was used so that I could develop this project on my local machine
 
 With Docker installed, pull the latest Apache Cassandra image and run a container as follows:
 
-> docker pull cassandra
-> docker run --name cassandra-container -p 9042:9042 -d cassandra:latest
+```docker pull cassandra```
+```docker run --name cassandra-container -p 9042:9042 -d cassandra:latest```
 
 This will allow you to develop the data model (i.e. work through the Jupyter notebook), without altering the provided connection code which connects to the localhost with default port 9042:
 
-> from cassandra.cluster import Cassandra
-> cluster = Cluster(['127.0.0.1'])
-> session = cluster.connect()
+```from cassandra.cluster import Cassandra```
+```cluster = Cluster(['127.0.0.1'])```
+```session = cluster.connect()```
 
 To stop and remove the container after the exercise:
 
-> docker stop cssandra-container
-> docker rm cassandra-container
+```docker stop cssandra-container```
+```docker rm cassandra-container```
