@@ -16,13 +16,18 @@ The part of the ETL pipeline that transfers data from a set of CSV files within 
 
 ## Requested Data Analysis
 
-I was instructed to create tables in Apache Cassandra based on the queries provided. The completed data model can be found in the Project_1B_Data_Modeling_with_Cassandra.ipynb Jupyter Notebook.
+I was instructed to create tables in Apache Cassandra based on the queries provided. The completed data model can be found in the Project_1B_ Project_Template.ipynb Jupyter Notebook.
 
 ### Creating tables to run the following queries with Apache Cassandra.
 
 1. Give me the artist, song title and song's length in the music app history that was heard during sessionId = 338, and itemInSession = 4
+
 SELECT artist, song, lenght FROM test_db WHERE sessionId = 338 AND itemInSession = 4
+
 2. Give me only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
+
 SELECT artist, song, fisrtName, lastName FROM test_db WHERE userid = 10 AND sessionid = 182
+
 3. Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
+
 SELECT fisrtName, lastName FROM test_db WHERE song = 'All Hands Against His Own'
