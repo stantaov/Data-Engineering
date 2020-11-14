@@ -1,6 +1,6 @@
 <h1>Project - Data Modeling with Postgres "Sparkify"</h1>
 
-The project was offered as part of Udacity's Data Engineering Nanodegree program.
+This project was offered as part of Udacity's Data Engineering Nanodegree program.
 
 <h2>Introduction</h2>
     
