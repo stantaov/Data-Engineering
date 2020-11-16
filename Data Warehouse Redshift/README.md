@@ -116,9 +116,8 @@ There are different ways of how you can use run analytical queries. It can be do
 
 ### Artists Table
 
-![artists table](artists table.jpg)
 
-![image](image.jpg)
+![image](artists table.jpg)
 
 ### Songs Table
 
