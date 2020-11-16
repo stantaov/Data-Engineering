@@ -118,6 +118,8 @@ There are different ways of how you can use run analytical queries. It can be do
 
 ![artists table](artists table.jpg)
 
+![image](image.jpg)
+
 ### Songs Table
 
 ![image](songs table.jpg)
