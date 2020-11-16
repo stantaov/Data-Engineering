@@ -78,7 +78,7 @@ Using the song and event data, I created a star schema optimized for queries on 
 
 ![image](star schema.jpg)
 
-Note: Redshift does not have primary or unique keys. However, I defined Primary, Foreign keys since the query optimizer uses those constraints to generate more efficient query plans, but Redshift didn't enforce them. As a result, I needed to deduplicate data using SQL subquery with DISTINCT before loading it into the Redshift tables. 
+***Note: Redshift does not have primary or unique keys. However, I defined Primary, Foreign keys since the query optimizer uses those constraints to generate more efficient query plans, but Redshift didn't enforce them. As a result, I needed to deduplicate data using SQL subquery with DISTINCT before loading it into the Redshift tables. 
 
 ## Project Template
 
