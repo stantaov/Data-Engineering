@@ -112,28 +112,27 @@ There are different ways of how you can use run analytical queries. It can be do
 
 ### Redshift Interface
 
-![image](redshift interface.jpg)
+![image](redshift_interface.jpg)
 
 ### Artists Table
-
 
 ![image](artists_table.jpg)
 
 ### Songs Table
 
-![image](songs table.jpg)
+![image](songs_table.jpg)
 
 ### Time Table
 
-![image](time table.jpg)
+![image](time_table.jpg)
 
 ### Users Table
 
-![image](users table.jpg)
+![image](users_table.jpg)
 
 ### Songplays Table
 
-![image](songplays table.jpg)
+![image](songplays_table.jpg)
 
 **Note: Python 3 was used for all scripts**
 
