@@ -1,4 +1,4 @@
-# Project: Data Lake on EMR cluster with Saprk
+# Project: Data Lake using S3 and EMR cluster with Saprk
 
 This project was offered as part of Udacity's Data Engineering Nanodegree program.
 
