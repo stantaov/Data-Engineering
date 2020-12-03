@@ -1,4 +1,3 @@
-
 # Project: Data Lake on EMR cluster with Saprk
 
 This project was offered as part of Udacity's Data Engineering Nanodegree program.
@@ -12,7 +11,7 @@ I have tasked with building an ETL pipeline that extracts their data from S3, pr
 
 ## Project Description
 
-In this project, I applied what I've learned on Spark and data lakes to build an ETL pipeline for a data lake hosted on S3. To complete the project, I loaded data from S3, process the data into analytics tables using Spark, and load them back into S3. I deployed this Spark process on AWS EMR cluster.
+In this project, I applied what I've learned on Spark and data lakes to build an ETL pipeline for a data lake hosted on S3. To complete the project, I loaded data from S3, process the data into analytics tables using Spark, and load them back into S3. I deploied this Spark process on a cluster EMR using AWS.
 
 ## Project Datasets
 
@@ -111,7 +110,7 @@ All tables were saved using parquet format and uploaded to S3.
 
 The follwing tables were created:
 
-**songplays_table**
+**songplays_table** (partitioned by year and month)
 
 ![image](songplays_table.jpg)
 
