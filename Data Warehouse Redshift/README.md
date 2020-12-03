@@ -72,11 +72,11 @@ Using the song and event data, I created a star schema optimized for queries on 
 
 ### Staging Tables
 
-![image](staging tables.jpg)
+![image](staging_tables.jpg)
 
 ### Dimension Tables
 
-![image](star schema.jpg)
+![image](star_schema.jpg)
 
 ***Note: Redshift does not have primary or unique keys. However, I defined Primary, Foreign keys since the query optimizer uses those constraints to generate more efficient query plans, but Redshift didn't enforce them. As a result, I needed to deduplicate data using SQL subquery with DISTINCT before loading it into the Redshift tables. 
 
