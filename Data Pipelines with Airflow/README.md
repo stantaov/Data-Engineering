@@ -18,4 +18,4 @@ Helpers class was created and contains all the SQL transformations. Thus, all ET
 
 ## Example of Airflow Pipeline
 
-![image](star_schema.jpg)
+![image](example-dag.png)
