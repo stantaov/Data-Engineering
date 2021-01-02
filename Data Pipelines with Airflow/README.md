@@ -48,3 +48,37 @@ The log files in the dataset you'll be working with are partitioned by year and 
 log_data/2018/11/2018-11-12-events.json
 log_data/2018/11/2018-11-13-events.json
 ```
+
+## Configuring the main DAG
+
+The main DAG is scheduled to run once an hour.
+In the main DAG, I added default parameters according to the guidelines:
+
+The DAG does not have dependencies on past runs
+On failure, the task are retried 3 times
+Retries happen every 5 minutes
+Catchup is turned off
+Do not email on retry
+
+
+## Operators
+
+To complete the project, I needed to build four different operators that will stage the data, transform the data, and run checks on data quality.
+
+All of the operators and task instances run SQL statements against the database on Redshift cluster.
+
+### Stage Operator
+
+The stage operator loads all avalible JSON formatted files from S3 to Amazon Redshift. The operator creates and runs a SQL COPY statement based on the parameters provided. The operator's parameters specifies where in S3 the file is loaded and what is the target table.
+
+The parameters distinguish between JSON files. The stage operator loads timestamped files from S3 based on the execution time and run backfills.
+
+### Fact and Dimension Operators
+
+Dimension and fact operators utilize the SQL helper class to run data transformations. These operators take as input a SQL statement and target database on which to run the query against.
+
+Dimension and Fact loads allow to switch between append-only and delete-load functionality. Dimension loads are often done with the truncate-insert pattern where the target table is emptied before the load. Fact tables are massive so I used append-only type functionality.
+
+### Data Quality Operator
+
+The data quality operator is used to run a simple check on the data itself. The operator should raises an exception and the task fail eventually.
