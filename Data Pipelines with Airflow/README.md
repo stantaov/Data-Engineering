@@ -82,3 +82,15 @@ Dimension and Fact loads allow to switch between append-only and delete-load fun
 ### Data Quality Operator
 
 The data quality operator is used to run a simple check on the data itself. The operator should raises an exception and the task fail eventually.
+
+## How to Run the Project
+
+1. Create a Redshift cluster, it should located in the same region as S3 blucket. Make sure it publicly avalible and your IP is whitelisted on security groups.
+
+2. Start Airflow server using Docker. 
+
+2. Config Airflow. Create AWS connection with your AWS credentials. Next, create another connection for Redshift cluster using Postgress connector. 
+
+3. Run the tables DAG in your Airflow interface to create all necessary tables on Redshift cluster. 
+
+4. Next, enable the main DAG to start the data process ingestion into the Redshift cluster tables and run data quality checks.
