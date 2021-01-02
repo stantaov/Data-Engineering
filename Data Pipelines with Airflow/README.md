@@ -87,9 +87,9 @@ The data quality operator is used to run a simple check on the data itself. The 
 
 1. Create a Redshift cluster, it should located in the same region as S3 blucket. Make sure it publicly avalible and your IP is whitelisted on security groups.
 
-2. Start Airflow server using Docker. 
-
-2. Config Airflow. Create AWS connection with your AWS credentials. Next, create another connection for Redshift cluster using Postgress connector. 
+2. Install Airflow. There is a details guide on how to instal it with docker (https://towardsdatascience.com/getting-started-with-airflow-using-docker-cd8b44dbff98)
+ 
+3. Config Airflow. Create AWS connection with your AWS credentials. Next, create another connection for Redshift cluster using Postgress connector. 
 
 3. Run the tables DAG in your Airflow interface to create all necessary tables on Redshift cluster. 
 
