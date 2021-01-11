@@ -1,4 +1,4 @@
-# Project: Data Pipelines with Airflow
+# Project: Data Pipelines with Airflow and S3
 
 This project was offered as part of Udacity's Data Engineering Nanodegree program.
 
