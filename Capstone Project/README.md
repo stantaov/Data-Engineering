@@ -96,7 +96,7 @@ Airport Date is a simple table of airport codes and corresponding cities. The da
 
 ### Define the Data Model
 
-#### Conceptual Data Model
+### Conceptual Data Model
 Star schema will be used for this project. The schemas will contain a fact table with multiple dimensional tables. Below you can see current tables.
 
 <img src="current_tables.jpg">
@@ -107,7 +107,7 @@ And the following Data Model is considered.
 
 <img src="data_model.jpg">
 
-#### Mapping Out Data Pipelines
+### Mapping Out Data Pipelines
 
 The data pipeline consists of 15 tables and allows to provide analytical information for the immigration department based on multiple parameters, like temperature on arrival city, the volume of visitors by the month of the year and many other insights that can help with planing the workload. The pipeline contains the following steps. 
 
@@ -123,3 +123,11 @@ The data pipeline consists of 15 tables and allows to provide analytical informa
 - Create the demographic table and rename columns to easy-read names.
 - Define two functions to create five mapping tables for I94 data. 
 - Save all tables in parquet format and load them to data lake S3.
+
+### Data Quality Checks
+
+Data quality checks were run by the Airflow pipeline during the process of uploading data to the Redshift database.
+
+<img src="airflow1.jpg">
+
+<img src="airflow2.jpg">
