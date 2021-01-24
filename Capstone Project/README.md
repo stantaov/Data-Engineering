@@ -131,3 +131,15 @@ Data quality checks were run by the Airflow pipeline during the process of uploa
 <img src="airflow1.jpg">
 
 <img src="airflow2.jpg">
+
+### How to Run the Project
+
+1. Update dwh.cfg file with your IAM KEY, SECRET, create your Redshift CLUSTER, DB_NAME (database name), DB_USER (database user name), DB_PASSWORD (database password).
+
+2. Open redshift_cluster.ipynb notebook and run all lines of code, wait till the Redshift cluster gets propagated. The last cell of the notebook will print out your DWH_ENDPOINT and DWH_ROLE_ARN. Use DWH_ENDPOINT for your HOST and DWH_ENDPOINT in the dwh.cfg file. Do not forget to update DWH_ROLE_ARN in the dwh.cfg file.
+
+3. Open terminal and run the create_cluster.py (python create_cluster.py) script of the ETL pipeline. This script connects to AWS Redshift and creates a database and necessary staging and dimension tables.
+
+4. Next run the etl.py script (python etl.py). It loads the data from S3 into staging tables on Redshift. Staging tables will be used to populate all dimension tables. When the script stops running all dimension tables will be populated with data.
+
+5. Log in to your AWS account, open Redshift and check whether or not all of the results of the queries match the expected results.
