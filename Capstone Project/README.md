@@ -10,6 +10,8 @@ The purpose of this project is an attempt to combine technologies learned throug
 
 This a capstone project and it's a part of the Udacity Data Engineering Nanodegree program. This project mimics a real-life situation when you need to analyze, clean, save the data into a columnar file format and load the data to a data lake on S3 using Spark. Create an Airflow pipeline to load the data to the Redshift database for further analytical purposes. You can see the process below.
 
+<img src="process.jpg">
+
 ### Describe and Gather Data
 
 The project contains four files that were gathered and provided by Udacity.
