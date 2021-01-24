@@ -54,3 +54,47 @@ I94 Immigration Data comes from the US National Tourism and Trade Office. A data
 * visatype - object - Class of admission legally admitting the non-immigrant to temporarily stay in U.S.
 
 World Temperature Data comes from Kaggle. Further details about the dataset can be found here: https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data.
+
+### World Temperature Data Dictionary
+
+* dt - Date in format YYYY-MM-DD
+* AverageTemperature - Average temperature of the city in a given date
+* AverageTemperatureUncertainty - Standard Deviation of the avg. temperature
+* City
+* Country
+* Latitude
+* Longitude
+
+The U.S. City Demographic Data comes from OpenSoft. Further details about the dataset can be found here: https://public.opendatasoft.com/explore/dataset/us-cities-demographics/export/.
+
+### Demographic Data Dictionary
+
+* City - Name of the city
+* State - US state of the city
+* Median Age - The median of the age of the population
+* Male Population - Number of the male population
+* Female Population - Number of the female population
+* Total Population - Number of the total population
+* Number of Veterans - Number of veterans living in the city
+* Foreign-born - Number of residents of the city that were not born in the city
+* Average Household Size - Average size of the houses in the city
+* State Code - Code of the state of the city
+* Race - Race class
+* Count - Number of individual of each race
+
+Airport Date is a simple table of airport codes and corresponding cities. The data can be found here: https://datahub.io/core/airport-codes#data.
+
+### Airport Data Dictionary
+
+* ident - Unique identifier
+* type - Type of the airport
+* name - Airport Name
+* elevation_ft - Altitude of the airport
+* continent - Continent
+* iso_country -ISO code of the country of the airport
+* iso_region - ISO code for the region of the airport
+* municipality - City where the airport is located
+* gps_code - GPS code of the airport
+* iata_code - IATA code of the airport
+* local_code - Local code of the airport
+* coordinates - GPS coordinates of the airport
