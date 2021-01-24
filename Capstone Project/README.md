@@ -124,17 +124,27 @@ The data pipeline consists of 15 tables and allows to provide analytical informa
 - Define two functions to create five mapping tables for I94 data. 
 - Save all tables in parquet format and load them to data lake S3.
 
+### ETL
+
+<img src="airflow1.jpg">
+
 ### Data Quality Checks
 
 Data quality checks were run by the Airflow pipeline during the process of uploading data to the Redshift database.
-
-<img src="airflow1.jpg">
 
 <img src="airflow2.jpg">
 
 ### How to Run the Project
 
-1. Update dwh.cfg file with your IAM KEY, SECRET, create your Redshift CLUSTER, DB_NAME (database name), DB_USER (database user name), DB_PASSWORD (database password).
+1. Update dwh.cfg file with your AWS ACCESS KEY and AWS SECRET ACCESS KEY.
+
+2. Create a Redshift cluster, it should be located in the same region as S3 blucket. Make sure it publicly avalible and your IP is whitelisted in the security group.
+
+3. Install Airflow. There is a details guide on how to instal it with docker (https://towardsdatascience.com/getting-started-with-airflow-using-docker-cd8b44dbff98)
+
+4. Upload airflow folder into your Airflow instance
+
+5. Create and config Airflow connections. Create AWS connection with your AWS credentials. Next, create another connection for Redshift cluster using Postgress connector. 
 
 2. Open redshift_cluster.ipynb notebook and run all lines of code, wait till the Redshift cluster gets propagated. The last cell of the notebook will print out your DWH_ENDPOINT and DWH_ROLE_ARN. Use DWH_ENDPOINT for your HOST and DWH_ENDPOINT in the dwh.cfg file. Do not forget to update DWH_ROLE_ARN in the dwh.cfg file.
 
