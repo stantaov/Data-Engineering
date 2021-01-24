@@ -143,3 +143,5 @@ Data quality checks were run by the Airflow pipeline during the process of uploa
 4. Next run the etl.py script (python etl.py). It loads the data from S3 into staging tables on Redshift. Staging tables will be used to populate all dimension tables. When the script stops running all dimension tables will be populated with data.
 
 5. Log in to your AWS account, open Redshift and check whether or not all of the results of the queries match the expected results.
+
+#### Note: Python 3 was used for all scripts
