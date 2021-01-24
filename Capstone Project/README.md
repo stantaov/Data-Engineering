@@ -4,14 +4,7 @@
 
 The purpose of this project is an attempt to combine technologies learned throughout the Udacity Data Engineering program. The project encompasses four datasets. The main dataset includes data on immigration to the United States, and supplementary datasets include data on airport codes, U.S. city demographics, and temperature data.
 
-The project follows the follow steps:
-* Step 1: Scope the Project and Gather Data
-* Step 2: Explore and Assess the Data
-* Step 3: Define the Data Model
-* Step 4: Run ETL to Model the Data
-* Step 5: Complete Project Write Up
-
-## Step 1: Scope the Project and Gather Data
+## Scope the Project and Gather Data
 
 ### Scope
 
@@ -98,3 +91,5 @@ Airport Date is a simple table of airport codes and corresponding cities. The da
 * iata_code - IATA code of the airport
 * local_code - Local code of the airport
 * coordinates - GPS coordinates of the airport
+
+
