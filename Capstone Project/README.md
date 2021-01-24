@@ -138,20 +138,19 @@ Data quality checks were run by the Airflow pipeline during the process of uploa
 
 1. Update dwh.cfg file with your AWS ACCESS KEY and AWS SECRET ACCESS KEY.
 
-2. Create a Redshift cluster, it should be located in the same region as S3 blucket. Make sure it publicly avalible and your IP is whitelisted in the security group.
+2. Create a EMR cluster, upload data and run etl.py to load all datasets in AWS S3 and save them in parquet format.
 
-3. Install Airflow. There is a details guide on how to instal it with docker (https://towardsdatascience.com/getting-started-with-airflow-using-docker-cd8b44dbff98)
+3. Create a Redshift cluster, it should be located in the same region as S3 blucket. Make sure it publicly avalible and your IP is whitelisted in the security group.
 
-4. Upload airflow folder into your Airflow instance
+4. Install Airflow. There is a details guide on how to instal it with docker (https://towardsdatascience.com/getting-started-with-airflow-using-docker-cd8b44dbff98)
 
-5. Create and config Airflow connections. Create AWS connection with your AWS credentials. Next, create another connection for Redshift cluster using Postgress connector. 
+5. Upload airflow folder into your Airflow instance
 
-2. Open redshift_cluster.ipynb notebook and run all lines of code, wait till the Redshift cluster gets propagated. The last cell of the notebook will print out your DWH_ENDPOINT and DWH_ROLE_ARN. Use DWH_ENDPOINT for your HOST and DWH_ENDPOINT in the dwh.cfg file. Do not forget to update DWH_ROLE_ARN in the dwh.cfg file.
+6. Create and config Airflow connections. Create AWS connection with your AWS credentials. Next, create another connection for Redshift cluster using Postgress connector. 
 
-3. Open terminal and run the create_cluster.py (python create_cluster.py) script of the ETL pipeline. This script connects to AWS Redshift and creates a database and necessary staging and dimension tables.
+7. Run dag_tables_capstone DAG to create all necessary table on Redshift
 
-4. Next run the etl.py script (python etl.py). It loads the data from S3 into staging tables on Redshift. Staging tables will be used to populate all dimension tables. When the script stops running all dimension tables will be populated with data.
+8. Run dag_main_capstone DAG to load data and run data quality checks
 
-5. Log in to your AWS account, open Redshift and check whether or not all of the results of the queries match the expected results.
 
 #### Note: Python 3 was used for all scripts
