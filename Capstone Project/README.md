@@ -138,15 +138,15 @@ Data quality checks were run by the Airflow pipeline during the process of uploa
 
 1. Update dwh.cfg file with your AWS ACCESS KEY and AWS SECRET ACCESS KEY.
 
-2. Create a EMR cluster, upload data and run etl.py to load all datasets in AWS S3 and save them in parquet format.
+2. Create an EMR cluster, upload data and run etl.py to load all datasets in AWS S3 and save them in parquet format.
 
-3. Create a Redshift cluster, it should be located in the same region as S3 blucket. Make sure it publicly avalible and your IP is whitelisted in the security group.
+3. Create a Redshift cluster, it should be located in the same region as S3 bucket. Make sure it publicly available and your IP is whitelisted in the security group.
 
-4. Install Airflow. There is a details guide on how to instal it with docker (https://towardsdatascience.com/getting-started-with-airflow-using-docker-cd8b44dbff98)
+4. Install Airflow. There is a detailed guide on how to install it with docker (https://towardsdatascience.com/getting-started-with-airflow-using-docker-cd8b44dbff98)
 
 5. Upload airflow folder into your Airflow instance
 
-6. Create and config Airflow connections. Create AWS connection with your AWS credentials. Next, create another connection for Redshift cluster using Postgress connector. 
+6. Create and config Airflow connections. Create an AWS connection with your AWS credentials. Next, create another connection for the Redshift cluster using the Postgress connector. 
 
 7. Run dag_tables_capstone DAG to create all necessary table on Redshift
 
