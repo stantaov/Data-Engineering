@@ -24,10 +24,10 @@ I94 Immigration Data comes from the US National Tourism and Trade Office. A data
 
 ### I94 Data Dictionary
 
-cicid - float64 - ID that uniquely identify one record in the dataset
-i94yr - float64 - 4 digit year
-i94mon- float64 - Numeric month
-i94cit - float64 - 3 digit code of source city for immigration (Born country)
+*cicid - float64 - ID that uniquely identify one record in the dataset
+*i94yr - float64 - 4 digit year
+*i94mon- float64 - Numeric month
+*i94cit - float64 - 3 digit code of source city for immigration (Born country)
 i94res - float64 - 3 digit code of source country for immigration (Residence country)
 i94port - object - Port addmitted through
 arrdate - float64 - Arrival date in the USA
