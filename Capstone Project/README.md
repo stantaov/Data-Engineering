@@ -94,4 +94,32 @@ Airport Date is a simple table of airport codes and corresponding cities. The da
 * local_code - Local code of the airport
 * coordinates - GPS coordinates of the airport
 
+### Define the Data Model
 
+#### Conceptual Data Model
+Star schema will be used for this project. The schemas will contain a fact table with multiple dimensional tables. Below you can see current tables.
+
+<img src="current_tables.jpg">
+
+And the following Data Model is considered.
+
+### Data Model
+
+<img src="data_model.jpg">
+
+#### Mapping Out Data Pipelines
+
+The data pipeline consists of 15 tables and allows to provide analytical information for the immigration department based on multiple parameters, like temperature on arrival city, the volume of visitors by the month of the year and many other insights that can help with planing the workload. The pipeline contains the following steps. 
+
+- Read I94 SAS files to spark data frame, rename columns, remove 
+- Rename columns to a more readable format
+- Remove null values from dtadfile since we need to use it as a primary key
+- Convert dtaddto and date_created to to_date format
+- Create a new column stayed_days to define the number of days each visitor stayed
+- Create a day column that can be used along month and city to map the temperature table 
+- Create the airport table where iata_code is not null and iso_country is US
+- For airport table convert iso_region into new column called state
+- Create the temperature table where Country is United States and year is 2012
+- Create the demographic table and rename columns to easy-read names.
+- Define two functions to create five mapping tables for I94 data. 
+- Save all tables in parquet format and load them to data lake S3.
