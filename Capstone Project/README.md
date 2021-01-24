@@ -27,30 +27,30 @@ I94 Immigration Data comes from the US National Tourism and Trade Office. A data
 * cicid - float64 - ID that uniquely identify one record in the dataset
 * i94yr - float64 - 4 digit year
 * i94mon- float64 - Numeric month
-*i94cit - float64 - 3 digit code of source city for immigration (Born country)
-i94res - float64 - 3 digit code of source country for immigration (Residence country)
-i94port - object - Port addmitted through
-arrdate - float64 - Arrival date in the USA
-i94mode - float64 - Mode of transportation (1 = Air; 2 = Sea; 3 = Land; 9 = Not reported)
-i94addr - object - State of arrival
-depdate -float64 - Departure date
-i94bir - float64 - Age of Respondent in Years
-i94visa - float64 - Visa codes collapsed into three categories: (1 = Business; 2 = Pleasure; 3 = Student)
-count - float64 - Used for summary statistics
-dtadfile - object - Character Date Field
-visapost - object - Department of State where where Visa was issued
-occup - object - Occupation that will be performed in U.S.
-entdepa - object - Arrival Flag. Whether admitted or paroled into the US
-entdepd - object - Departure Flag. Whether departed, lost visa, or deceased
-entdepu - object - Update Flag. Update of visa, either apprehended, overstayed, or updated to PR
-matflag - object - Match flag
-biryear - float64 - 4 digit year of birth
-dtaddto - object - Character date field to when admitted in the US
-gender - object - Gender
-insnum - object - INS number
-airline - object - Airline used to arrive in U.S.
-admnum - float64 - Admission number, should be unique and not nullable
-fltno - object - Flight number of Airline used to arrive in U.S.
-visatype - object - Class of admission legally admitting the non-immigrant to temporarily stay in U.S.
+* i94cit - float64 - 3 digit code of source city for immigration (Born country)
+* i94res - float64 - 3 digit code of source country for immigration (Residence country)
+* i94port - object - Port addmitted through
+* arrdate - float64 - Arrival date in the USA
+* i94mode - float64 - Mode of transportation (1 = Air; 2 = Sea; 3 = Land; 9 = Not reported)
+* i94addr - object - State of arrival
+* depdate -float64 - Departure date
+* i94bir - float64 - Age of Respondent in Years
+* i94visa - float64 - Visa codes collapsed into three categories: (1 = Business; 2 = Pleasure; 3 = Student)
+* count - float64 - Used for summary statistics
+* dtadfile - object - Character Date Field
+* visapost - object - Department of State where where Visa was issued
+* occup - object - Occupation that will be performed in U.S.
+* entdepa - object - Arrival Flag. Whether admitted or paroled into the US
+* entdepd - object - Departure Flag. Whether departed, lost visa, or deceased
+* entdepu - object - Update Flag. Update of visa, either apprehended, overstayed, or updated to PR
+* matflag - object - Match flag
+* biryear - float64 - 4 digit year of birth
+* dtaddto - object - Character date field to when admitted in the US
+* gender - object - Gender
+* insnum - object - INS number
+* airline - object - Airline used to arrive in U.S.
+* admnum - float64 - Admission number, should be unique and not nullable
+* fltno - object - Flight number of Airline used to arrive in U.S.
+* visatype - object - Class of admission legally admitting the non-immigrant to temporarily stay in U.S.
 
 World Temperature Data comes from Kaggle. Further details about the dataset can be found here: https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data.
